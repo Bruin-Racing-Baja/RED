@@ -1,0 +1,22 @@
+//define a class red that deals with all things to do with displaying pin data.
+
+//initialize RED:
+//pins for display
+//pin for button
+//pins for what we want to read (all the sensors), the string to relate pin to reading
+
+//save pin values
+//(save the public variables to private vairables)
+
+//initialize input pins
+
+//do you need to initialize output pins?
+
+//what does input handling do?
+
+//button function: interupt when button pin updated. Also deal with button debouncing.
+
+//get buttonindex and output corresponding pin name and data
+
+//display function: take in pin name and data update the display
+
