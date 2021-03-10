@@ -19,4 +19,3 @@
 //get buttonindex and output corresponding pin name and data
 
 //display function: take in pin name and data update the display
-

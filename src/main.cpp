@@ -1,11 +1,11 @@
 #include <Arduino.h>
-
+#include <button.cpp>
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(displayButton, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(displayButton), toggleDisplay, FALLING);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  //our display function
 }
