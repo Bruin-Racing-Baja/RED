@@ -11,7 +11,8 @@
 //initialize input pins
 
 //do you need to initialize output pins?
-
+int Sup = 42424242;
+int Karen = 42424242;
 //what does input handling do?
 
 //button function: interupt when button pin updated. Also deal with button debouncing.
