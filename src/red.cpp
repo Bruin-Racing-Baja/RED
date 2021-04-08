@@ -6,7 +6,9 @@
 //pins for what we want to read (all the sensors), the string to relate pin to reading
 
 //save pin values
-//(save the public variables to private vairables)
+//(save the public variables to private vairables)\
+
+int hey = 4;
 
 //initialize input pins
 
