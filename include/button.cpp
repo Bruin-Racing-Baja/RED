@@ -1,4 +1,4 @@
-#include <Arduino.h>
+/*#include <Arduino.h>
 int displayButton = 2;
 int timePressed = 0;
 int pinBeingRead = 0;
@@ -12,4 +12,4 @@ void toggleDisplay() {
         Serial.println(pinBeingRead);
     }
     timePressed = millis();
-}
+} */
