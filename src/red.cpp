@@ -1,14 +1,25 @@
+#include <Arduino.h>
+#include <LiquidCrystal.h>
+#include <string.h>
 //define a class red that deals with all things to do with displaying pin data.
 
+class RED 
+{
+    public:
+    String name; 
+    int age;
+    String occupation;
+
+    void printdata()
+    
+};
 //initialize RED:
 //pins for display
 //pin for button
 //pins for what we want to read (all the sensors), the string to relate pin to reading
 
 //save pin values
-//(save the public variables to private vairables)\
-
-int hey = 4;
+//(save the public variables to private vairables)
 
 //initialize input pins
 
