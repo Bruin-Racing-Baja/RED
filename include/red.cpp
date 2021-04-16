@@ -2,31 +2,28 @@
 #include <LiquidCrystal.h>
 class RED 
 {
-    public:
-    String name; 
-    int age;
-    String occupation;
+  private:
+  int list[8] = {0,1,2,3,4,5,6,7};
+  int displayButton;
+  int timePressed = 0;
+  int pinBeingRead = 0;
+  int numberofPinstoRead = 8;
 
-    void printdata() {
-
-    };
-
+  public:
+  RED(int, int, int, int, int, int, int);
+  void addPin(int);
+  void toggleDisplay();
+  void displayList();
 };
 
-const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 7;
-LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
-const int pot = A0;
+RED::RED (int rs, int en, int d4, int d5, int d6, int d7, int dispButton) {
+  LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+  displayButton = dispButton;
+};
 
-//write ur function that'll display the list 
+//const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 7;
 
-
-int list[] = {0,1,2,3,4,5,6,7};
-//button function 
-int displayButton = 2;
-int timePressed = 0;
-int pinBeingRead = 0;
-int numberofPinstoRead = 8;
-void toggleDisplay() {
+void RED::toggleDisplay() {
     if (millis() - timePressed > 1000) {
         pinBeingRead = pinBeingRead + 1;
         if (pinBeingRead == numberofPinstoRead) {
@@ -37,15 +34,12 @@ void toggleDisplay() {
     timePressed = millis();
 }
 
-void displayList(){
-
-  lcd.clear();
-  lcd.print("Pin A1:");
-  lcd.setCursor(0,1);
-lcd.print(list[pinBeingRead]);
-  delay(1000);
-    
-}
+// void RED::displayList(){
+//   lcd.clear();
+//   lcd.print("Pin A1:");
+//   lcd.setCursor(0,1);
+//   lcd.print(list[pinBeingRead]);
+//   delay(1000);
 
 //takes in number from the list and display that number to the display 
 
@@ -69,3 +63,7 @@ lcd.print(list[pinBeingRead]);
 
 //get button index and output corresponding pin name and data
 //display function: take in pin name and data update the display
+
+void help() {
+
+}
