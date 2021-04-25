@@ -15,5 +15,5 @@ void setup() {
 }
 
 void loop() {
-//RED.displayList();
+  red.displayList();
 }
