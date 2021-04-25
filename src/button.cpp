@@ -1,10 +1,10 @@
 #include <button.h>
 
-Button::Button (int dispButton) {
+Button::Button (int PinsToRead, int dispButton) {
     m_displayButton = dispButton;
     m_timePressed = 0;
     m_pinBeingRead = 0;
-    m_numberofPinstoRead = 8;
+    m_numberofPinstoRead = PinsToRead;
     attachInterrupt(digitalPinToInterrupt(m_displayButton), this->toggleDisplay, FALLING);
 }
 

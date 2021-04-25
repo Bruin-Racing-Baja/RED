@@ -13,7 +13,7 @@ class RED
   Button m_button;
 
   public:
-  RED(int rs, int en, int d4, int d5, int d6, int d7, int dispButton, int* pins8);
+  RED(int rs, int en, int d4, int d5, int d6, int d7, int pinsToRead, int dispButton, int* pins8);
   void displayList();
 };
 

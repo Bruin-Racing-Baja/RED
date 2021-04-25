@@ -10,7 +10,7 @@ class Button{
     
     static int m_numberofPinstoRead;
     public:
-    Button(int dispButton);
+    Button(int pinsToRead, int dispButton);
     static void toggleDisplay();
     static int m_pinBeingRead;
 };
