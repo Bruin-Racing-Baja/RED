@@ -8,10 +8,6 @@ RED red(12, 11, 5, 4, 3, 7, BUTTON, listOfPins);
 void setup() {
   Serial.begin(9600);
   pinMode(BUTTON, INPUT);
-  //lcd.begin(16, 2);
-  //lcd.print("Cheryl, Emma, and");
-  //lcd.setCursor(0,1);
-  //lcd.print("Jake are cool");
 }
 
 void loop() {
