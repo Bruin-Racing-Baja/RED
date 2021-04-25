@@ -12,5 +12,4 @@ void setup() {
 
 void loop() {
   red.displayList();
-  Serial.println("aaaaaaaa");
 }

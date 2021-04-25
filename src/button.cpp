@@ -13,7 +13,7 @@ int Button::m_pinBeingRead;
 int Button::m_numberofPinstoRead;
 
 void Button::toggleDisplay() {
-    if (millis() - m_timePressed > 100) {
+    if (millis() - m_timePressed > 200) {
         m_pinBeingRead++;
         
         if (m_pinBeingRead == m_numberofPinstoRead) {
