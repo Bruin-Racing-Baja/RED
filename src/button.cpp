@@ -7,6 +7,7 @@ Button::Button (int PinsToRead, int dispButton) {
     m_numberofPinstoRead = PinsToRead;
     attachInterrupt(digitalPinToInterrupt(m_displayButton), this->toggleDisplay, FALLING);
 }
+//hi
 
 unsigned long Button::m_timePressed;
 int Button::m_pinBeingRead;
