@@ -24,6 +24,7 @@ class RED
   LiquidCrystal lcd;      //create an object that modifies the 16*2 LCD display
   Button m_button;        //create an object that cycles through an index when a button is pressed
   int m_backLight;
+  int m_time_delay;
 
   public:
   RED(int rs, int en, int d4, int d5, int d6, int d7, int pinsToRead, int dispButton, int backLight, int* pins8);

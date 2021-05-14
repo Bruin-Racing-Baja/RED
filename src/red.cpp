@@ -16,15 +16,25 @@ RED::RED (int rs, int en, int d4, int d5, int d6, int d7, int pinsToRead, int di
   m_list = pins8; //Assign the user's list of pins to a member variable
   m_backLight = backLight;
   pinMode(m_backLight, OUTPUT);
+  m_time_delay = 10000; //change 10sec to a minute for real world application
 }
 
 
 //Display the pin and the pin value on the lcd based on what index the button is on
 void RED::displayList(){
-  digitalWrite(m_backLight, HIGH);
-  lcd.clear();
-  lcd.print("Pin A1:");
-  lcd.setCursor(0,1);
-  lcd.print(m_list[m_button.m_pinBeingRead]);
-  delay(1000);//will want to remove this later and replace with a timer interupt
+  if (millis()-m_button.m_timePressed >= m_time_delay ) { 
+    digitalWrite(m_backLight, LOW); 
+  } else {
+    digitalWrite(m_backLight, HIGH);}
+
+  if ((m_list[m_button.m_pinBeingRead] != 8)) {
+  //digitalWrite(m_backLight, HIGH);
+    lcd.clear();
+    lcd.print("Pin A1:");
+    lcd.setCursor(0,1);
+    lcd.print(m_list[m_button.m_pinBeingRead]);
+    delay(1000);//will want to remove this later and replace with a timer interupt
+  } else {
+    digitalWrite(m_backLight, LOW); //get to pin8, eight click to turn backlight off
+ }
 }
