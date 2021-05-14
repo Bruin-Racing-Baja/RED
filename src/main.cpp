@@ -10,7 +10,9 @@
 
 #define BACKLIGHT 10
 #define BUTTON 2
-int listOfPins[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+#define PHOTORESISTOR A0
+#define TEMPERATURE 2
+int listOfPins[9] = {PHOTORESISTOR, TEMPERATURE , 3, 4, 5, 6, 7, 8};
 RED red(12, 11, 5, 4, 3, 7, 8, BUTTON, BACKLIGHT, listOfPins);
 
 
