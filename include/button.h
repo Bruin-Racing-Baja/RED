@@ -24,6 +24,8 @@ class Button{
     Button(int pinsToRead, int dispButton);
     static void toggle();
     static int m_pinBeingRead;              //What index the button class is on 
+    static bool buttonPressed();
+    static unsigned long m_timeLastPressed;
 };
 
 

@@ -23,10 +23,14 @@ class RED
   int* m_list;            //m_list contains all of the pins RED will read
   LiquidCrystal lcd;      //create an object that modifies the 16*2 LCD display
   Button m_button;        //create an object that cycles through an index when a button is pressed
+  static int m_index;
+  static int m_numPins;
+  int m_displayButton;
 
   public:
   RED(int rs, int en, int d4, int d5, int d6, int d7, int pinsToRead, int dispButton, int* pins8);
   void displayList();
+  static void toggleDisplay();
 };
 
 

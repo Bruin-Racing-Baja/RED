@@ -15,9 +15,10 @@ Button::Button (int PinsToRead, int dispButton) {
     m_timePressed = 0;
     m_pinBeingRead = 0;
     m_numberofPinstoRead = PinsToRead;
+    m_timeLastPressed = 0;
 
     //When button pin voltage falls the toggle display function is called
-    attachInterrupt(digitalPinToInterrupt(m_displayButton), this->toggle, FALLING);
+    //attachInterrupt(digitalPinToInterrupt(m_displayButton), this->toggle, FALLING);
 }
 
 
@@ -25,7 +26,7 @@ Button::Button (int PinsToRead, int dispButton) {
 unsigned long Button::m_timePressed;
 int Button::m_pinBeingRead;
 int Button::m_numberofPinstoRead;
-
+unsigned long Button::m_timeLastPressed;
 
 //When called debounce button then increment pinBeingRead member variable if neccesary
 void Button::toggle() {
@@ -38,4 +39,16 @@ void Button::toggle() {
 
         m_timePressed = millis();
     }
+}
+
+bool Button::buttonPressed() {
+    bool r;
+    if (millis() - m_timeLastPressed > 200) {
+        r = true;
+    } else {
+        r = false;
+    }
+
+    m_timeLastPressed = millis();
+    return r;
 }
