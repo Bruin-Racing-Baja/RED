@@ -17,8 +17,7 @@ RED::RED (int rs, int en, int d4, int d5, int d6, int d7, int pinsToRead, int di
   m_numPins = pinsToRead;
   m_index = 0;
   m_displayButton = dispButton;
-
-  attachInterrupt(digitalPinToInterrupt(dispButton), this->toggleDisplay, FALLING);
+  attachInterrupt(digitalPinToInterrupt(m_displayButton), this->toggleDisplay, FALLING);
 }
 
 //Need to declare these variables here to make space in the memory for the interupt to work?

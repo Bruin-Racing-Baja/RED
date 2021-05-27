@@ -16,13 +16,10 @@ RED red(12, 11, 5, 4, 3, 7, 8, BUTTON, listOfPins);
 
 void setup() {
   Serial.begin(9600);
-  pinMode(BUTTON, INPUT);
+  pinMode(BUTTON, INPUT_PULLUP);
 }
 
 
 void loop() {
   red.displayList();
-  if (digitalRead(BUTTON) == HIGH){
-    Serial.println("woo");
-  }
 }
